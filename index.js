@@ -12,11 +12,13 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-app.use(
-  cors({
-    origin: ["http://localhost:3000", "https://explorewonders.in/", "https://658d54d294dd25a0a9ce0920--phenomenal-heliotrope-c4da39.netlify.app/"],
-  })
-);
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://ex-w-ah2ir-77hzzt66d-singh-csm.vercel.app');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
