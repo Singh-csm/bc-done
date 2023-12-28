@@ -14,7 +14,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://travelious-project.netlify.app", "https://comforting-taffy-d07f72.netlify.app"],
+    origin: ["http://localhost:3000", "https://explorewonders.in/", "https://658d54d294dd25a0a9ce0920--phenomenal-heliotrope-c4da39.netlify.app/"],
   })
 );
 app.use(express.json());
